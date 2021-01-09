@@ -1,8 +1,6 @@
 # OCR-1
 Optical Image Recognition app for iOS 14. To scan from gallery photos or directly from camera.
 
-# OCR-1
-
 OCR-1 is a fast and simple OCR library written in Swift. It uses Vision & VisionKit Framework for Document image recognition and conversion into text.
 
 ## Features
