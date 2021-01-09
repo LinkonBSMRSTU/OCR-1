@@ -16,23 +16,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wwu-ic-hbU">
-                                <rect key="frame" x="20" y="108" width="374" height="300"/>
+                                <rect key="frame" x="20" y="108" width="374" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="AdP-5s-AvC"/>
+                                    <constraint firstAttribute="height" constant="250" id="AdP-5s-AvC"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-UC-sql">
-                                <rect key="frame" x="20" y="428" width="374" height="300"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-UC-sql">
+                                <rect key="frame" x="20" y="378" width="374" height="484"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="hsU-RS-TMx"/>
-                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-p4-kaR">
-                                <rect key="frame" x="197" y="568" width="20" height="20"/>
+                                <rect key="frame" x="197" y="610" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="QbU-H5-g7o"/>
                                     <constraint firstAttribute="width" constant="20" id="YJf-QB-rBj"/>
@@ -42,6 +39,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wwu-ic-hbU" secondAttribute="trailing" constant="20" id="Dcu-pN-bYb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DpK-UC-sql" secondAttribute="bottom" id="Ehv-zT-9io"/>
                             <constraint firstItem="DpK-UC-sql" firstAttribute="top" secondItem="Wwu-ic-hbU" secondAttribute="bottom" constant="20" id="KZ6-Qq-yLW"/>
                             <constraint firstItem="DpK-UC-sql" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KlI-4n-Z47"/>
                             <constraint firstItem="1fZ-p4-kaR" firstAttribute="centerX" secondItem="DpK-UC-sql" secondAttribute="centerX" id="caw-5G-t6f"/>
