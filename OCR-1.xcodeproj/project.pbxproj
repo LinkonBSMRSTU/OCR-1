@@ -15,6 +15,7 @@
 		4FD63D4825A9846000B4B1EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD63D4625A9846000B4B1EB /* LaunchScreen.storyboard */; };
 		4FD63D5325A9846000B4B1EB /* OCR_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD63D5225A9846000B4B1EB /* OCR_1Tests.swift */; };
 		4FD63D5E25A9846000B4B1EB /* OCR_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD63D5D25A9846000B4B1EB /* OCR_1UITests.swift */; };
+		4FD63D6C25A9B0ED00B4B1EB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD63D6B25A9B0ED00B4B1EB /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4FD63D5925A9846000B4B1EB /* OCR-1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OCR-1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD63D5D25A9846000B4B1EB /* OCR_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCR_1UITests.swift; sourceTree = "<group>"; };
 		4FD63D5F25A9846000B4B1EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD63D6B25A9B0ED00B4B1EB /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				4FD63D3B25A9845F00B4B1EB /* AppDelegate.swift */,
 				4FD63D3D25A9845F00B4B1EB /* SceneDelegate.swift */,
 				4FD63D3F25A9845F00B4B1EB /* ViewController.swift */,
+				4FD63D6B25A9B0ED00B4B1EB /* ImageSaver.swift */,
 				4FD63D4125A9845F00B4B1EB /* Main.storyboard */,
 				4FD63D4425A9846000B4B1EB /* Assets.xcassets */,
 				4FD63D4625A9846000B4B1EB /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				4FD63D4025A9845F00B4B1EB /* ViewController.swift in Sources */,
 				4FD63D3C25A9845F00B4B1EB /* AppDelegate.swift in Sources */,
 				4FD63D3E25A9845F00B4B1EB /* SceneDelegate.swift in Sources */,
+				4FD63D6C25A9B0ED00B4B1EB /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,6 +51,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="sJM-Of-LvD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="2ka-pi-dSh">
+                            <connections>
+                                <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" id="7Se-5h-hHz"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="photo.fill.on.rectangle.fill" catalog="system" id="pz3-fS-ayL">
                             <connections>
                                 <action selector="galleryButtonTapped:" destination="BYZ-38-t0r" id="oJa-5D-8zo"/>
@@ -58,6 +63,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cameraButton" destination="2ka-pi-dSh" id="CvQ-QQ-lLf"/>
                         <outlet property="galleryButton" destination="pz3-fS-ayL" id="dax-hy-d5K"/>
                         <outlet property="galleryImageView" destination="Wwu-ic-hbU" id="hRu-g6-Zss"/>
                         <outlet property="loadingActivity" destination="1fZ-p4-kaR" id="SKZ-11-BZc"/>

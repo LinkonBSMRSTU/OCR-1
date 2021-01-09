@@ -8,6 +8,7 @@
 
 import UIKit
 import Vision
+import VisionKit
 
 class ViewController: UIViewController {
 
@@ -15,15 +16,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var galleryButton: UIBarButtonItem!
     @IBOutlet weak var resultTextView: UITextView!
     @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
-
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    
     var visionRequest = VNRecognizeTextRequest(completionHandler: nil)
+    let imageSaver = ImageSaver()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.stopAnimating()
     }
-
+    
+    //----------------------------------------------
+    // MARK: Activity Indication Animation Function
+    //----------------------------------------------
     private func startAnimating() {
         self.loadingActivity.startAnimating()
     }
@@ -33,9 +39,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func galleryButtonTapped(_ sender: Any) {
-        setupGallery()
+        self.setupGallery()
     }
 
+    @IBAction func cameraButtonTapped(_ sender: Any) {
+        self.configureCameraToDocView()
+    }
+    
+    
+    
+    
+    //--------------------------------------------------
+    // MARK: Camera Image To Text Recognition Functions
+    //--------------------------------------------------
+    private func configureCameraToDocView(){
+        let scanningDocVc = VNDocumentCameraViewController()
+        scanningDocVc.delegate = self
+        self.present(scanningDocVc, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    //--------------------------------------------------
+    // MARK: Gallery Image To Text Recognition Functions
+    //--------------------------------------------------
     private func setupGallery() {
 
         if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary)) {
@@ -109,23 +138,10 @@ class ViewController: UIViewController {
 
 
 
-
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-
-        picker.dismiss(animated: true, completion: nil)
-        
-        self.startAnimating()
-        self.resultTextView.text = ""
-
-        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        self.galleryImageView.image = image
-        
-        self.setupVisionTextRecognize(image: image)
-    }
-    
-    
+//--------------------------------------------------
+// MARK: Alert Controller Functions
+//--------------------------------------------------
+extension ViewController {
     
     private func showAlert(title: String, message: String) {
         
@@ -139,6 +155,55 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     private func dismissAlert() {
         self.dismiss(animated: true, completion: nil)
     }
+}
 
+
+//----------------------------------------------------------------
+// MARK: Camera Image to Text Recongnition Completition Functions
+//----------------------------------------------------------------
+extension ViewController: VNDocumentCameraViewControllerDelegate {
+    
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        
+        for pageNumber in 0..<scan.pageCount {
+            
+            let image = scan.imageOfPage(at: pageNumber)
+            self.startAnimating()
+            self.resultTextView.text = ""
+            self.galleryImageView.image = image
+            self.setupVisionTextRecognize(image: image)
+            
+            imageSaver.writeToPhotoAlbum(image: image)
+            
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
+        print(error)
+        self.showAlert(title: "Error", message: error.localizedDescription)
+        controller.dismiss(animated: true)
+    }
+    
+}
+
+
+//----------------------------------------------------------------
+// MARK: Gallery Image to Text Recongnition Completition Functions
+//----------------------------------------------------------------
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+
+        picker.dismiss(animated: true, completion: nil)
+        
+        self.startAnimating()
+        self.resultTextView.text = ""
+
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.galleryImageView.image = image
+        
+        self.setupVisionTextRecognize(image: image)
+    }
 }
 
