@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F16224E25AAC8BA009C1E11 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F16224D25AAC8BA009C1E11 /* MainViewController.swift */; };
+		4F53091F25AAD6430077DF91 /* FaceTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53091E25AAD6430077DF91 /* FaceTrackViewController.swift */; };
+		4F53092125AAD9B10077DF91 /* OCROptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F53092025AAD9B10077DF91 /* OCROptionViewController.swift */; };
 		4FD63D3C25A9845F00B4B1EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD63D3B25A9845F00B4B1EB /* AppDelegate.swift */; };
 		4FD63D3E25A9845F00B4B1EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD63D3D25A9845F00B4B1EB /* SceneDelegate.swift */; };
-		4FD63D4025A9845F00B4B1EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD63D3F25A9845F00B4B1EB /* ViewController.swift */; };
+		4FD63D4025A9845F00B4B1EB /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD63D3F25A9845F00B4B1EB /* OCRViewController.swift */; };
 		4FD63D4325A9845F00B4B1EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD63D4125A9845F00B4B1EB /* Main.storyboard */; };
 		4FD63D4525A9846000B4B1EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD63D4425A9846000B4B1EB /* Assets.xcassets */; };
 		4FD63D4825A9846000B4B1EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD63D4625A9846000B4B1EB /* LaunchScreen.storyboard */; };
@@ -36,10 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F16224D25AAC8BA009C1E11 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4F53091E25AAD6430077DF91 /* FaceTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackViewController.swift; sourceTree = "<group>"; };
+		4F53092025AAD9B10077DF91 /* OCROptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCROptionViewController.swift; sourceTree = "<group>"; };
 		4FD63D3825A9845F00B4B1EB /* OCR-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCR-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD63D3B25A9845F00B4B1EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD63D3D25A9845F00B4B1EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4FD63D3F25A9845F00B4B1EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FD63D3F25A9845F00B4B1EB /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
 		4FD63D4225A9845F00B4B1EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FD63D4425A9846000B4B1EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD63D4725A9846000B4B1EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +109,10 @@
 			children = (
 				4FD63D3B25A9845F00B4B1EB /* AppDelegate.swift */,
 				4FD63D3D25A9845F00B4B1EB /* SceneDelegate.swift */,
-				4FD63D3F25A9845F00B4B1EB /* ViewController.swift */,
+				4F16224D25AAC8BA009C1E11 /* MainViewController.swift */,
+				4FD63D3F25A9845F00B4B1EB /* OCRViewController.swift */,
+				4F53092025AAD9B10077DF91 /* OCROptionViewController.swift */,
+				4F53091E25AAD6430077DF91 /* FaceTrackViewController.swift */,
 				4FD63D6B25A9B0ED00B4B1EB /* ImageSaver.swift */,
 				4FD63D4125A9845F00B4B1EB /* Main.storyboard */,
 				4FD63D4425A9846000B4B1EB /* Assets.xcassets */,
@@ -262,10 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD63D4025A9845F00B4B1EB /* ViewController.swift in Sources */,
+				4FD63D4025A9845F00B4B1EB /* OCRViewController.swift in Sources */,
 				4FD63D3C25A9845F00B4B1EB /* AppDelegate.swift in Sources */,
 				4FD63D3E25A9845F00B4B1EB /* SceneDelegate.swift in Sources */,
 				4FD63D6C25A9B0ED00B4B1EB /* ImageSaver.swift in Sources */,
+				4F16224E25AAC8BA009C1E11 /* MainViewController.swift in Sources */,
+				4F53092125AAD9B10077DF91 /* OCROptionViewController.swift in Sources */,
+				4F53091F25AAD6430077DF91 /* FaceTrackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

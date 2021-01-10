@@ -13,10 +13,11 @@ import VisionKit
 class OCRViewController: UIViewController {
 
     @IBOutlet weak var galleryImageView: UIImageView!
-    @IBOutlet weak var galleryButton: UIBarButtonItem!
     @IBOutlet weak var resultTextView: UITextView!
     @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
+
+    
+    var cameraTapped: Bool = false
     
     var visionRequest = VNRecognizeTextRequest(completionHandler: nil)
     let imageSaver = ImageSaver()
@@ -24,7 +25,10 @@ class OCRViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = "Document to Text"
+        
         self.stopAnimating()
+        self.startAction(cameraTapped: self.cameraTapped)
     }
     
     //----------------------------------------------
@@ -37,14 +41,16 @@ class OCRViewController: UIViewController {
     private func stopAnimating() {
         self.loadingActivity.stopAnimating()
     }
-
-    @IBAction func galleryButtonTapped(_ sender: Any) {
-        self.setupGallery()
+    
+    private func startAction(cameraTapped: Bool) {
+        if (cameraTapped) {
+            self.configureCameraToDocView()
+        }
+        else {
+            self.setupGallery()
+        }
     }
 
-    @IBAction func cameraButtonTapped(_ sender: Any) {
-        self.configureCameraToDocView()
-    }
     
     
     
