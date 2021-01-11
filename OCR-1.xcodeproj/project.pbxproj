@@ -42,7 +42,7 @@
 		4F16224D25AAC8BA009C1E11 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4F53091E25AAD6430077DF91 /* FaceTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackViewController.swift; sourceTree = "<group>"; };
 		4F53092025AAD9B10077DF91 /* OCROptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCROptionViewController.swift; sourceTree = "<group>"; };
-		4FD63D3825A9845F00B4B1EB /* OCR-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCR-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD63D3825A9845F00B4B1EB /* OCR & Face Track.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCR & Face Track.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD63D3B25A9845F00B4B1EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD63D3D25A9845F00B4B1EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4FD63D3F25A9845F00B4B1EB /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		4FD63D3925A9845F00B4B1EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4FD63D3825A9845F00B4B1EB /* OCR-1.app */,
+				4FD63D3825A9845F00B4B1EB /* OCR & Face Track.app */,
 				4FD63D4E25A9846000B4B1EB /* OCR-1Tests.xctest */,
 				4FD63D5925A9846000B4B1EB /* OCR-1UITests.xctest */,
 			);
@@ -157,7 +157,7 @@
 			);
 			name = "OCR-1";
 			productName = "OCR-1";
-			productReference = 4FD63D3825A9845F00B4B1EB /* OCR-1.app */;
+			productReference = 4FD63D3825A9845F00B4B1EB /* OCR & Face Track.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4FD63D4D25A9846000B4B1EB /* OCR-1Tests */ = {
@@ -458,7 +458,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.linkon.OCR-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "OCR & Face Track";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.linkon.OCR-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "OCR & Face Track";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
